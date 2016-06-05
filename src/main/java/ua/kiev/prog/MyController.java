@@ -51,7 +51,7 @@ public class MyController {
     public ResponseEntity<byte[]> getZippedFiles(HttpServletResponse response) throws IOException {
         Map<String, byte[]> zipFiles = files;
         response.setStatus(HttpServletResponse.SC_OK);
-        response.addHeader("Content-Disposition", "attachment; filename=\"test.zip\"");
+        response.addHeader("Content-Disposition", "attachment; filename=\"files.zip\"");
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(byteArrayOutputStream);
